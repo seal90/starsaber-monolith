@@ -1,0 +1,26 @@
+spring:
+  profiles:
+    active: dev
+  mvc:
+    date-format: yyyy-MM-dd HH:mm:ss
+
+
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: org.seal.startsaber.sealstarsaberdemo.entity
+
+#mapper:
+#  mappers:
+#    - org.seal.starsaber.arch.dao.SealMapper
+#  not-empty: false
+#  identity: MYSQL
+
+seal:
+  arch:
+    json:
+      objectmapper:
+        ignoreClass:
+          - javax.servlet.ServletRequest
+          - javax.servlet.ServletResponse
+          - org.springframework.core.io.InputStreamSource

@@ -1,0 +1,35 @@
+seal:
+  arch:
+    swagger:
+      enable: true
+      basePackage: org.seal.startsaber.sealstarsaberdemo
+#    log:
+#      controller:
+#        logSplitMark: "\n"
+    log:
+      controller:
+        requestParameter: REQUEST_IDENTITY_ID
+
+spring:
+  datasource:
+    url: jdbc:hsqldb:mem:broker-db
+    username: sa
+    password:
+
+  flyway:
+    baseline-on-migrate: true
+
+  security:
+    user:
+      name: hello
+      password: world
+      roles:
+      - user
+#logging:
+#  level:
+#    org.seal.startsaber.sealstarsaberdemo.dao: TRACE
+mybatis:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+

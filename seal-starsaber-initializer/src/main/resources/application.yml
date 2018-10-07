@@ -1,0 +1,46 @@
+initializr:
+  env:
+    maven:
+      parent:
+        groupId: abc
+        artifactId: abc
+        version: 1.1.1
+  bootVersions:
+    - name: 2.0.3.RELEASE
+      id: 2.0.3.RELEASE
+      default: true
+  javaVersions:
+    - id: 1.8
+      default: true
+  languages:
+    - name: Java
+      id: java
+      default: true
+  packagings:
+    - name: Jar
+      id: jar
+      default: true
+  types:
+    - name: Maven Project
+      id: maven-project
+      description: Generate a Maven based project archive
+      tags:
+        build: maven
+        format: project
+      default: true
+      action: /starter.zip
+  dependencies:
+    - name: Web
+      content:
+        - name: Web
+          id: web
+          description: Full-stack web development with Tomcat and Spring MVC
+    - name: seal web
+      content:
+        - name: hello
+          id: world
+          groupId: org.seal
+          artifactId: artifact
+          version: 1.0.0
+          starter: false
+          description: suggect append

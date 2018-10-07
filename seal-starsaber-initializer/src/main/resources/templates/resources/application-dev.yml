@@ -1,0 +1,28 @@
+seal:
+  arch:
+    swagger:
+      enable: true
+      basePackage: {{packageName}}.manage
+    log:
+      controller:
+        requestParameter: REQUEST_IDENTITY_ID
+
+spring:
+  datasource:
+    url: jdbc:hsqldb:mem:broker-db
+    username: sa
+    password:
+  flyway:
+    baseline-on-migrate: true
+  security:
+    user:
+      name: hello
+      password: world
+      roles:
+      - user
+
+mybatis:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+
